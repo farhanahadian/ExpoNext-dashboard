@@ -1,0 +1,81 @@
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    'primary': #EB9508,
+    'secondary': #0F1A20,
+    'success': #0AB74F,
+    'info': #18B8DB,
+    'warning': #EBD408,
+    'danger': #D62424,
+    'light': #F3F3F3,
+    'white': #fff,
+    'dark': #494949
+  ),
+  $theme-colors
+);
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body { font-family: 'Poppins', sans-serif; font-size: 12px; }
+h1,h2,h3,h4,h5,h6 { font-family: 'Inter', sans-serif; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.7rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1rem; }
+.btn { border-radius: 15px; font-size: 14px; }
+.btn-primary { color: #fff; }
+.btn-sm { font-size: 12px; }
+
+
+/* Custom Layout CSS */
+.the-sidebar { }
+.the-sidebar .b-sidebar { width: 250px; }
+.the-sidebar .b-sidebar .b-sidebar-header { background-color: #fff; }
+.the-sidebar .menu-sidebar-wrapper { overflow: hidden auto; padding: 10px 0; background: #fcfcfc; }
+.the-sidebar .menu-sidebar-wrapper::-webkit-scrollbar { width: 5px; }
+.the-sidebar .menu-sidebar-wrapper::-webkit-scrollbar-track {}
+.the-sidebar .menu-sidebar-wrapper::-webkit-scrollbar-thumb { background: white; opacity: 0.5; }
+.the-sidebar .menu-sidebar-list { list-style: none; padding: 0; }
+.the-sidebar .menu-sidebar-list li { width: 100%; }
+.the-sidebar .menu-sidebar-list li a .b-icon, .the-sidebar .menu-sidebar-list li .nav-item .b-icon { font-size: 20px; margin: 0 10px 0 0; }
+.the-sidebar .menu-sidebar-list li a, .the-sidebar .menu-sidebar-list li .nav-item { display: flex; padding: 15px 5px 15px 25px; text-decoration: none; background: transparent; color: #4D4D4D; font-size: 14px; width: 85%; margin: 5px 0; align-items: center }
+.the-sidebar .menu-sidebar-list li a:hover { opacity: 0.4; }
+.the-sidebar .menu-sidebar-list li a.active { background: #EB9508ff; color: #fff; border-radius: 0 20px 20px 0; }
+.the-sidebar-reset { margin-left: 0 !important; }
+.the-navbar { margin-left: 250px; background-color: #fff !important; }
+.the-content { margin-left: 250px; overflow: hidden; background: #F6F9FB; min-height: 90vh; }
+.the-footer { margin-left: 250px; }
+body.bg-white .the-content { background: #fff !important; }
+body.bg-gray .the-content { background: #F6F9FB !important; }
+
+/* Form Style */
+.t-form-text fieldset { background: #fefefe; margin: 0; padding: 10px 5px 5px; font-size: 14px; }
+.t-form-text fieldset:nth-child(even) { background: #e5e5e5; }
+.t-form-text legend { position: relative; top: 15px; font-size: 12px; }
+.t-form-box .form-control { border: 1px solid #c1c1c1; border-radius: 10px; padding: 15px 20px !important; }
+.t-form-box .form-control::placeholder { font-size: 12px; color: #c1c1c1;}
+
+.t-form-box .form-control.b-form-datepicker { padding: 0 !important; font-size: 12px; }
+.t-form-box .form-control.b-form-datepicker .form-control { padding: 10px 8px 8px !important; font-size: 12px; }
+
+.t-form-box .form-control.b-form-datepicker
+.b-calendar .b-calendar-nav .btn { color: #545454 !important; }
+
+/* Common Style */
+.rounded-t { border-radius: 20px; }
+.image-fit-contain { width: 100%; height: 100%; object-fit: contain; object-position: center; }
+.image-fit-cover { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.text-orange { color: rgba(243, 150, 32, 1) !important; }
+
+/* For V-Select */
+.vs__dropdown-toggle { padding: 4px 10px 8px !important; border: 1px solid #c1c1c1 !important; border-radius: 10px !important; background-color: #fff !important; }
+.vs__selected-options {}
+.vs__selected-options .vs__search { color: #c1c1c1; }
+.vs__selected-options .vs__search::placeholder { color: #c1c1c1; }
+.no-style > .vs__dropdown-toggle { padding: 0 !important; border: 0 !important; border-radius: 0 !important; background-color: transparent; }
+
+/* For V-Wizard */
